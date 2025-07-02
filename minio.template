@@ -1,0 +1,18 @@
+apiVersion: barmancloud.cnpg.io/v1
+kind: ObjectStore
+metadata:
+  name: minio-store
+spec:
+  retentionPolicy: "30d"
+  configuration:
+    destinationPath: s3://cnp/
+    endpointURL: http://#IP#:9000
+    s3Credentials:
+      accessKeyId:
+        name: minio-creds
+        key: MINIO_ACCESS_KEY
+      secretAccessKey:
+        name: minio-creds
+        key: MINIO_SECRET_KEY
+    wal:
+      compression: gzip
