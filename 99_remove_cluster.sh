@@ -2,7 +2,7 @@
 
 # Uninstall cluster
 #kubectl delete -f cluster-example.yaml
-rm cluster-example.yaml
+#rm cluster-example.yaml
 
 # Uninstall operator
 #kubectl delete -f https://raw.githubusercontent.com/cloudnative-pg/cloudnative-pg/main/releases/cnpg-1.18.0.yaml
